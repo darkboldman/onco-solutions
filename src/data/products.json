@@ -1,0 +1,111 @@
+[
+    {
+      "title": "MADRIX DMX",
+      "description": "LED Pixel Drivers For 'To The Pixel' LED Control & Automating Scenes.",
+      "image": "/images/products/madrix.jpg",
+      "link": "/products/madrix-dmx",
+      "id": 1,
+      "slug": "madrix-dmx",
+      "category": "Madrix",
+      "price": 549.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "PHILIPS LIGHTING",
+      "description": "Quality LED Lighting For Residential & Commercial Applications.",
+      "image": "/images/products/philips.jpg",
+      "link": "/products/philips-lighting",
+      "id": 2,
+      "slug": "philips-lighting",
+      "category": "Philips",
+      "price": 349.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "INTELIGHT EXIT SIGNS",
+      "description": "LED Emergency Evacuation Route Lights & Battery Backup Accessories.",
+      "image": "/images/products/exit-sign.jpg",
+      "link": "/products/intelight-exit",
+      "id": 3,
+      "slug": "intelight-exit",
+      "category": "Intelight",
+      "price": 149.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "MEANWELL POWER SUPPLY",
+      "description": "Meanwell LED Power Supplies For LED Lighting & Industrial Automation Applications.",
+      "image": "/images/products/meanwell.jpg",
+      "link": "/products/meanwell-power",
+      "id": 4,
+      "slug": "meanwell-power",
+      "category": "meanwell",
+      "price": 129.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "OCCUPANCY SENSORS",
+      "description": "Range Of Quality Occupancy, Motion, IR, Ambient Light & Microwave Sensors.",
+      "image": "/images/products/occupancy.jpg",
+      "link": "/products/occupancy-sensors",
+      "id": 5,
+      "slug": "occupancy-sensors",
+      "category": "sensors",
+      "price": 189.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "NEO SWITCHES",
+      "description": "Schneider Clipsal NEO Light Switches & Power Outlets For Residential & Commercial Installation.",
+      "image": "/images/products/neo.jpg",
+      "link": "/products/neo-switches",
+      "id": 6,
+      "slug": "neo-switches",
+      "category": "Neo",
+      "price": 239.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "LED ALUMINIUM PROFILES",
+      "description": "LED Aluminium Profiles For Range Of Applications With Diffusers, End Caps & Brackets.",
+      "image": "/images/products/profiles.jpg",
+      "link": "/products/aluminium-profiles",
+      "id": 7,
+      "slug": "aluminium-profiles",
+      "category": "aluminium-profiles",
+      "price": 189.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "CLIPSAL C-BUS",
+      "description": "Schneider Clipsal C-Bus Lighting Automation Components & Accessories.",
+      "image": "/images/products/cbus.jpg",
+      "link": "/products/clipsal-cbus",
+      "id": 8,
+      "slug": "clipsal-cbus",
+      "category": "Automation",
+      "price": 1149.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    },
+    {
+      "title": "GUEST ROOM SWITCHES",
+      "description": "Guest Room Light Switches, DND & Make Up & Door Bell Switches For Hospitality.",
+      "image": "/images/products/guestroom.jpg",
+      "link": "/products/guest-room-switches",
+      "id": 3,
+      "slug": "guest-room-switches",
+      "category": "Hospitality",
+      "price": 149.99,
+      "details": "Lorem Ipsum...",
+      "features": ["Feature 1", "Feature 2"]
+    }
+  ]
+  

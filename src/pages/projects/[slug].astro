@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import allProjects from '../../data/projects.json';
+
+// Define the Project type
+interface Project {
+  name: string;
+  year: number;
+  scope: string;
+  description: string;
+  clientUrl?: string;
+  location: string;
+  imageUrl?: string;
+  slug: string;
+}
+
+// Required getStaticPaths function for dynamic routes
+export async function getStaticPaths() {
+  const projects = allProjects as Project[];
+  
+  return projects.map(project => {
+    return {
+      params: { slug: project.slug },
+      props: { project },
+    };
+  });
+}
+
+// Get the project from props (already fetched in getStaticPaths)
+const { project } = Astro.props;
+
+// Extract project details
+const { name, year, scope, description, clientUrl, location, imageUrl } = project;
+
+// Format description paragraphs
+const descriptionParagraphs = description.split('\n\n');
+---
+
+<Layout title={`${name} | ONCO Projects`}>
+  <main>
+    <div class="project-header">
+      <div class="container">
+        <a href="/projects" class="back-link">← Back to Projects</a>
+        <h1>{name}</h1>
+        <div class="project-meta">
+          <div class="meta-item">
+            <span class="meta-label">Year</span>
+            <span class="meta-value">{year}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Location</span>
+            <span class="meta-value">{location}</span>
+          </div>
+          <div class="meta-item">
+            <span class="meta-label">Scope</span>
+            <span class="meta-value">{scope}</span>
+          </div>
+          {clientUrl && (
+            <div class="meta-item">
+              <span class="meta-label">Client</span>
+              <a href={clientUrl} target="_blank" rel="noopener noreferrer" class="client-link">
+                Visit Client Website
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    </div>
+
+    <div class="container project-content">
+      <div class="project-gallery">
+        {imageUrl ? (
+          <img src={imageUrl} alt={`${name} project by ONCO`} class="main-image" />
+        ) : (
+          <div class="placeholder-image">
+            <span>ONCO</span>
+          </div>
+        )}
+        
+        <!-- Gallery images would go here -->
+      </div>
+
+      <div class="project-description">
+        <h2>Project Overview</h2>
+        {descriptionParagraphs.map(paragraph => (
+          <p>{paragraph}</p>
+        ))}
+      </div>
+
+      <div class="related-projects">
+        <h2>Related Projects</h2>
+        <!-- We would add related projects here -->
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .project-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 4rem 0 2rem;
+  }
+
+  .back-link {
+    display: inline-block;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+  }
+
+  .back-link:hover {
+    color: white;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .meta-item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .meta-label {
+    font-size: 0.875rem;
+    opacity: 0.8;
+    margin-bottom: 0.25rem;
+  }
+
+  .meta-value {
+    font-size: 1.125rem;
+    font-weight: 500;
+  }
+
+  .client-link {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .client-link:hover {
+    text-decoration: underline;
+  }
+
+  .project-content {
+    padding: 3rem 0;
+  }
+
+  .project-gallery {
+    margin-bottom: 2rem;
+  }
+
+  .main-image, .placeholder-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  .main-image {
+    object-fit: cover;
+  }
+
+  .placeholder-image {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-image span {
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .project-description h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+  }
+
+  .project-description p {
+    margin-bottom: 1.5rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  .related-projects {
+    margin-top: 4rem;
+  }
+
+  .related-projects h2 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+  }
+
+  @media (max-width: 768px) {
+    .project-meta {
+      gap: 1rem;
+    }
+    
+    .meta-item {
+      width: calc(50% - 0.5rem);
+    }
+  }
+</style>

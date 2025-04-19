@@ -1,0 +1,130 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ProjectGrid from '../../components/ProjectGrid.astro';
+import ProjectFilters from '../../components/ProjectFilters.astro';
+import allProjects from '../../data/projects.json';
+
+// Define the Project type
+interface Project {
+  name: string;
+  year: number;
+  scope: string;
+  description: string;
+  clientUrl?: string;
+  location: string;
+  imageUrl?: string;
+  slug: string;
+}
+
+// Type the projects array
+const projects: Project[] = allProjects as Project[];
+
+// Function to get unique values for each filter with proper typing
+function getUniqueValues<T>(data: T[], key: keyof T): T[keyof T][] {
+  return [...new Set(data.map(item => item[key]))];
+}
+
+// Get filter options with correct types
+const filterOptions = {
+  years: getUniqueValues(projects, 'year') as number[],
+  locations: getUniqueValues(projects, 'location') as string[],
+  scopes: getUniqueValues(projects, 'scope') as string[]
+};
+
+// Get URL parameters for filtering
+const { url } = Astro;
+const yearParam = url.searchParams.get('year');
+const locationParam = url.searchParams.get('location');
+const scopeParam = url.searchParams.get('scope');
+
+// Apply filters
+let filteredProjects = [...projects]; // Create a copy to avoid mutating the original
+
+// Filter by year if yearParam exists
+if (yearParam) {
+  const yearValue = parseInt(yearParam);
+  filteredProjects = filteredProjects.filter(project => project.year === yearValue);
+}
+
+// Filter by location if locationParam exists
+if (locationParam) {
+  filteredProjects = filteredProjects.filter(project => 
+    project.location.toLowerCase() === locationParam.toLowerCase()
+  );
+}
+
+// Filter by scope if scopeParam exists
+if (scopeParam) {
+  filteredProjects = filteredProjects.filter(project => 
+    project.scope.toLowerCase() === scopeParam.toLowerCase()
+  );
+}
+
+// Selected filters for the filter component
+const selectedFilters = {
+  year: yearParam ? parseInt(yearParam) : undefined, 
+  location: locationParam ? locationParam.toLowerCase() : undefined,
+  scope: scopeParam ? scopeParam.toLowerCase() : undefined
+};
+
+// Sort projects by year (newest first)
+filteredProjects.sort((a, b) => b.year - a.year);
+
+// Debug output to check filter behavior (during development)
+console.log('URL params:', { yearParam, locationParam, scopeParam });
+console.log('Selected filters:', selectedFilters);
+console.log('Total projects:', projects.length);
+console.log('Filtered projects:', filteredProjects.length);
+
+---
+
+<Layout title="Our Projects | ONCO - Lighting Automation & LED Solutions">
+  <main>
+    <div class="hero">
+      <div class="container">
+        <h1>Our Projects</h1>
+        <p>Discover our portfolio of over {projects.length} commercial lighting projects completed since 2009</p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Note: Removing form element as we're handling the submission via JavaScript -->
+      <ProjectFilters 
+        filterOptions={filterOptions} 
+        selectedFilters={selectedFilters} 
+      />
+
+      <ProjectGrid 
+        projects={filteredProjects} 
+        title={filteredProjects.length === projects.length 
+          ? "All Projects" 
+          : `Filtered Results (${filteredProjects.length})`} 
+      />
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .hero {
+    background-color: #2c3e50;
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 1.25rem;
+    opacity: 0.9;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+</style>

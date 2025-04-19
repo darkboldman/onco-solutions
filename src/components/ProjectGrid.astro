@@ -1,0 +1,75 @@
+---
+import ProjectCard from './ProjectCard.astro';
+
+// Define the props with TypeScript interface
+interface Project {
+  name: string;
+  year: number;
+  scope: string;
+  description: string;
+  clientUrl?: string;
+  location: string;
+  imageUrl?: string;
+  slug: string;
+}
+
+interface Props {
+  projects: Project[];
+  title?: string;
+}
+
+const { projects, title = "Our Projects" } = Astro.props;
+---
+
+<section class="projects-section">
+  {title && <h2 class="section-title">{title}</h2>}
+  
+  <div class="projects-grid">
+    {projects.map(project => (
+      <ProjectCard 
+        name={project.name}
+        year={project.year}
+        scope={project.scope}
+        description={project.description}
+        clientUrl={project.clientUrl}
+        location={project.location}
+        imageUrl={project.imageUrl}
+        slug={project.slug}
+      />
+    ))}
+  </div>
+</section>
+
+<style>
+  .projects-section {
+    padding: 2rem 0;
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    color: #2c3e50;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .projects-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

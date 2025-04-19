@@ -1,0 +1,144 @@
+---
+// Define the props with TypeScript interface
+interface Props {
+  name: string;
+  year: number;
+  scope: string;
+  description: string;
+  clientUrl?: string;
+  location: string;
+  imageUrl?: string;
+  slug: string;
+}
+
+const { name, year, scope, description, clientUrl, location, imageUrl, slug } = Astro.props;
+---
+
+<div class="project-card">
+  <a href={`/projects/${slug}`} class="project-link">
+    <div class="image-container">
+      {imageUrl ? (
+        <img src={imageUrl} alt={`${name} project by ONCO`} />
+      ) : (
+        <div class="placeholder-image">
+          <span>ONCO</span>
+        </div>
+      )}
+      <div class="project-overlay">
+        <span class="view-project">View Project</span>
+      </div>
+    </div>
+    <div class="project-info">
+      <h3 class="project-name">{name}</h3>
+      <div class="project-meta">
+        <span class="year">{year}</span>
+        <span class="location">{location}</span>
+      </div>
+      <p class="scope">{scope}</p>
+    </div>
+  </a>
+</div>
+
+<style>
+  .project-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .project-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .image-container {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+  }
+
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .project-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .placeholder-image {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .placeholder-image span {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .project-card:hover .project-overlay {
+    opacity: 1;
+  }
+
+  .view-project {
+    color: white;
+    font-weight: bold;
+    padding: 8px 16px;
+    border: 2px solid white;
+    border-radius: 4px;
+  }
+
+  .project-info {
+    padding: 1.5rem;
+  }
+
+  .project-name {
+    font-size: 1.25rem;
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem;
+    color: #777;
+  }
+
+  .scope {
+    font-size: 0.875rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+  }
+</style>
