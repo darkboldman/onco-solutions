@@ -25,7 +25,7 @@ const { title } = Astro.props;
       <div class="container">
         <nav>
           <div class="logo">
-            <a href="/"><img src="/public/images/logo/oncologo.png" alt="onco solutions logo"></a>
+            <a href="/"><img src="/public/images/logo/onco-globe-only.png" alt="onco solutions logo"><span class="onco-solutions"><span class="onco">ONCO</span><span class="solutions">SOLUTIONS</span></span></a>
           </div>
           <div class="nav-toggle">
             <span></span>
@@ -199,13 +199,44 @@ const { title } = Astro.props;
     align-items: center;
     height: var(--header-height);
   }
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    max-height: 12rem;
+    align-items: center;
+  }
 
-  /* .logo a {
+  .logo a {
+    display: flex;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
     font-weight: 700;
+    align-items: center;
+    text-decoration: none;
     color: var(--primary-color);
-  } */
+  }
+  .logo img {
+    max-height: 3rem;
+    padding-right: 1rem;
+  }
+  .logo span.onco-solutions {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding: 0.1rem 1rem;
+    border-left: solid 1px rgb(192, 192, 192);
+    color: var(--primary-color);
+  }
+  .logo span .onco {
+    color: var(--primary-color);
+    padding: none;
+    border-left: none;
+  }
+  .logo .solutions {
+    color: var(--secondary-color);
+    padding: none;
+    border-left: none;
+  }
 
   .nav-menu {
     display: flex;
