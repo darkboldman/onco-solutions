@@ -1,0 +1,122 @@
+---
+// src/components/ProductCard.astro
+interface Props {
+  product: {
+    title: string;
+    description: string; 
+    image: string;
+    slug: string;
+    price: number;
+    category: string;
+    [key: string]: any;
+  };
+}
+
+const { product } = Astro.props;
+---
+
+<div class="product-card">
+  <div class="product-image">
+    <img src={product.image} alt={product.title} />
+    <div class="category-badge">{product.category}</div>
+  </div>
+  <div class="product-info">
+    <h2>{product.title}</h2>
+    <p class="description">{product.description}</p>
+    <div class="price-action">
+      <p class="price">Rs. {product.price.toFixed(2)}</p>
+      <a href={`/products/${product.slug}`} class="view-button">View Details</a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .product-image {
+    position: relative;
+    height: 220px;
+  }
+
+  .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .category-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .product-info {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .product-info h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-color);
+  }
+
+  .description {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    flex-grow: 1;
+  }
+
+  .price-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+
+  .price {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #2563eb;
+  }
+
+  .view-button {
+    background-color: #2563eb;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+  }
+
+  .view-button:hover {
+    background-color: #1d4ed8;
+  }
+</style>

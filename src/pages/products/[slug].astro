@@ -1,0 +1,281 @@
+---
+// src/pages/products/[slug].astro
+import Layout from "../../layouts/Layout.astro";
+import productsData from "../../data/products.json";
+
+// Generate paths for all products
+export function getStaticPaths() {
+  return productsData.map(product => ({
+    params: { slug: product.slug },
+    props: { product },
+  }));
+}
+
+// Get the product from props
+const { product } = Astro.props;
+---
+
+<Layout title={`${product.title} | Lighting Solutions`}>
+  <main class="product-detail-container">
+    <div class="breadcrumb">
+      <a href="/products">Products</a> / <span>{product.title}</span>
+    </div>
+
+    <div class="product-content">
+      <div class="product-gallery">
+        <div class="main-image">
+          <img src={product.image} alt={product.title} />
+          <div class="category-tag">{product.category}</div>
+        </div>
+      </div>
+      
+      <div class="product-info">
+        <h1>{product.title}</h1>
+        <p class="product-description">{product.description}</p>
+        <div class="price-section">
+          <span class="price">${product.price.toFixed(2)}</span>
+          <span class="availability">In Stock</span>
+        </div>
+        
+        <div class="action-buttons">
+          <button class="add-to-cart">Add to Cart</button>
+          <button class="wishlist">Add to Wishlist</button>
+        </div>
+        
+        <div class="product-details">
+          <h3>Product Details</h3>
+          <p>{product.details}</p>
+        </div>
+        
+        <div class="features-section">
+          <h3>Features</h3>
+          <ul>
+            {product.features.map(feature => (
+              <li><span class="feature-bullet">•</span> {feature}</li>
+            ))}
+          </ul>
+        </div>
+        
+        <div class="specifications">
+          <h3>Specifications</h3>
+          <div class="spec-grid">
+            <div class="spec-item">
+              <span class="spec-label">Category</span>
+              <span class="spec-value">{product.category}</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Product ID</span>
+              <span class="spec-value">{product.id}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .product-detail-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .breadcrumb {
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    color: #666;
+  }
+
+  .breadcrumb a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .breadcrumb a:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+  }
+
+  .product-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  @media (min-width: 768px) {
+    .product-content {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .product-gallery {
+    position: relative;
+  }
+
+  .main-image {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .main-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+
+  .category-tag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+
+  .product-info h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 16px;
+  }
+
+  .product-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 24px;
+  }
+
+  .price-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #2563eb;
+    margin-right: 16px;
+  }
+
+  .availability {
+    background-color: #10b981;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+
+  .add-to-cart {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+
+  .add-to-cart:hover {
+    background-color: #1d4ed8;
+  }
+
+  .wishlist {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .wishlist:hover {
+    background-color: #f3f4f6;
+    border-color: #c0c0c0;
+  }
+
+  .product-details, .features-section, .specifications {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 1px solid #eaeaea;
+  }
+
+  .product-details h3, .features-section h3, .specifications h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+  }
+
+  .product-details p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+  }
+
+  .features-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .features-section li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+  }
+
+  .feature-bullet {
+    color: #2563eb;
+    font-size: 1.5rem;
+    margin-right: 10px;
+  }
+
+  .spec-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .spec-item {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 6px;
+  }
+
+  .spec-label {
+    display: block;
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 4px;
+  }
+
+  .spec-value {
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+</style>

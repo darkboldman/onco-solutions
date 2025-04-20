@@ -1,0 +1,181 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Services | Onco">
+  <section class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Expert Electrical & Lighting Solutions</h1>
+      <div class="hero-content">
+        <p>
+          At Onco, we transform spaces through comprehensive electrical and lighting solutions. Our expert team designs customized electrical installations, collaborates with architects and design teams, and delivers optimized solutions tailored to your specific project requirements.
+        </p>
+        <p>
+          From supplying premium components for lighting automation to managing turn-key projects for electrical installations, we provide end-to-end services that combine technical excellence with aesthetic vision.
+        </p>
+        <p>
+          <strong>Small enough to care, large enough to deliver</strong> — whether your project is intimate or expansive, we bring the same dedication to quality, innovation, and client satisfaction.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="services-overview">
+    <div class="container">
+      <h2>Our Comprehensive Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Consultation</h3>
+          <p>Expert guidance on electrical and lighting solutions tailored to your specific requirements.</p>
+        </div>
+        <div class="service-card">
+          <h3>Design</h3>
+          <p>Custom electrical installation designs that balance functionality, efficiency, and aesthetics.</p>
+        </div>
+        <div class="service-card">
+          <h3>Project Management</h3>
+          <p>End-to-end oversight ensuring on-time, on-budget delivery with exceptional results.</p>
+        </div>
+        <div class="service-card">
+          <h3>Installation</h3>
+          <p>Professional implementation of electrical systems and lighting fixtures by our certified team.</p>
+        </div>
+        <div class="service-card">
+          <h3>Integration</h3>
+          <p>Seamless connection of lighting control systems with existing or new building infrastructure.</p>
+        </div>
+        <div class="service-card">
+          <h3>Maintenance</h3>
+          <p>Ongoing support and service to ensure optimal performance of your electrical systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brands-section">
+    <div class="container">
+      <h2>Premium Partnerships</h2>
+      <p>As authorized agents, stockists, and retailers, we provide access to world-class brands:</p>
+      <div class="brands-grid">
+        <div class="brand-item">Philips Lighting</div>
+        <div class="brand-item">Dynalite Control Systems</div>
+        <div class="brand-item">Madrix DMX</div>
+        <div class="brand-item">DALI Control Systems</div>
+        <div class="brand-item">LED Aluminum Profiles</div>
+        <div class="brand-item">Commercial Sound Systems</div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .hero-section {
+      padding: 6rem 2rem;
+      background-color: #f5f7fa;
+      position: relative;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .hero-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #1a2b3c;
+    }
+    
+    .hero-content {
+      max-width: 800px;
+      line-height: 1.6;
+    }
+    
+    .hero-content p {
+      margin-bottom: 1.5rem;
+      font-size: 1.1rem;
+    }
+    
+    .services-overview {
+      padding: 5rem 2rem;
+      background-color: #ffffff;
+    }
+    
+    .services-overview h2 {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      text-align: center;
+    }
+    
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+    
+    .service-card {
+      padding: 2rem;
+      background-color: #f9fafc;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .service-card h3 {
+      color: #1a2b3c;
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+    
+    .brands-section {
+      padding: 5rem 2rem;
+      background-color: #f5f7fa;
+    }
+    
+    .brands-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+    
+    .brands-section p {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    
+    .brands-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+    
+    .brand-item {
+      padding: 1.5rem;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      font-weight: 600;
+      color: #1a2b3c;
+    }
+    
+    @media (max-width: 768px) {
+      .hero-title {
+        font-size: 2rem;
+      }
+      
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .brands-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</Layout>

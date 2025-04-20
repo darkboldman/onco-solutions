@@ -130,7 +130,7 @@ const { years, locations, scopes } = filterOptions;
   }
 </style>
 
-<script>
+<!-- <script>
   // Client-side script to handle filter application
   document.addEventListener('DOMContentLoaded', () => {
     // Get references to the form elements
@@ -163,5 +163,45 @@ const { years, locations, scopes } = filterOptions;
         window.location.href = url;
       });
     }
+  });
+</script> -->
+<!-- components/ProjectFilters.astro -->
+<!-- ... existing code ... -->
+
+<script define:vars={{selectedFilters}}>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Get references to the form elements, with type casting to HTMLSelectElement
+    const yearFilter = document.getElementById('year-filter');
+    const locationFilter = document.getElementById('location-filter');
+    const scopeFilter = document.getElementById('scope-filter');
+    const filterButton = document.getElementById('filter-button');
+    const resetButton = document.querySelector('.reset-button');
+
+
+    const updateFilters = () => {
+        // Create URL parameters
+        const params = new URLSearchParams();
+        
+        // Add selected values to URL params if they exist
+        if (yearFilter instanceof HTMLSelectElement && yearFilter.value) {
+            params.append('year', yearFilter.value)
+        }
+        if (locationFilter && locationFilter.value) {
+            params.append('location', locationFilter.value);
+        }
+        if (scopeFilter && scopeFilter.value) {
+            params.append('scope', scopeFilter.value);
+        }
+        
+        // Update the URL and dispatch an event
+        const queryString = params.toString();
+        const newUrl = queryString ? `/projects?${queryString}` : '/projects';
+        window.history.pushState({}, '', newUrl);
+        window.dispatchEvent(new Event('filter-change'));
+    }
+    
+    filterButton?.addEventListener('click', () => {updateFilters()});
+    resetButton?.addEventListener('click', (e) => {e.preventDefault(); window.history.pushState({}, '', '/projects'); window.dispatchEvent(new Event('filter-change'));});
+
   });
 </script>

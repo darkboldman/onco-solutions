@@ -1,0 +1,72 @@
+---
+// src/pages/products.astro
+import Layout from "../../layouts/Layout.astro";
+import ProductCard from "../../components/ProductCard.astro";
+import productsData from "../../data/products.json";
+
+export const prerender = false;
+
+// Redirect to /products/1
+Astro.response.status = 301;
+Astro.response.headers.set('Location', '/products/1');
+---
+
+<Layout title="Products | Lighting Solutions">
+  <main class="products-container">
+    <div class="header-section">
+      <h1>Our Products</h1>
+      <p>Quality lighting solutions for all your needs</p>
+    </div>
+    
+    <div class="products-grid">
+      {productsData.map((product) => (
+        <ProductCard product={product} />
+      ))}
+    </div>
+  </main>
+</Layout>
+
+<style>
+  .products-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+
+  .header-section {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .header-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 10px;
+  }
+
+  .header-section p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .products-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  @media (min-width: 640px) {
+    .products-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .products-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>

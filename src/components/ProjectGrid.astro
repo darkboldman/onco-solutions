@@ -1,7 +1,5 @@
 ---
-import ProjectCard from './ProjectCard.astro';
-
-// Define the props with TypeScript interface
+// Define the Project type
 interface Project {
   name: string;
   year: number;
@@ -15,61 +13,132 @@ interface Project {
 
 interface Props {
   projects: Project[];
-  title?: string;
+  title: string;
 }
 
-const { projects, title = "Our Projects" } = Astro.props;
+const { projects, title } = Astro.props;
 ---
 
-<section class="projects-section">
-  {title && <h2 class="section-title">{title}</h2>}
+<section class="projects-grid-section">
+  <h2 class="projects-title">{title}</h2>
   
-  <div class="projects-grid">
-    {projects.map(project => (
-      <ProjectCard 
-        name={project.name}
-        year={project.year}
-        scope={project.scope}
-        description={project.description}
-        clientUrl={project.clientUrl}
-        location={project.location}
-        imageUrl={project.imageUrl}
-        slug={project.slug}
-      />
-    ))}
-  </div>
+  {projects.length === 0 ? (
+    <div class="no-projects">
+      <p>No projects found. Please try a different page.</p>
+    </div>
+  ) : (
+    <div class="projects-grid">
+      {projects.map(project => (
+        <a href={`/projects/${project.slug}`} class="project-card">
+          <div class="project-image">
+            {project.imageUrl ? (
+              <img src={project.imageUrl} alt={project.name} />
+            ) : (
+              <div class="placeholder-image">{project.name[0]}</div>
+            )}
+          </div>
+          <div class="project-info">
+            <h3>{project.name}</h3>
+            <div class="project-meta">
+              <span class="year">{project.year}</span>
+              <span class="location">{project.location}</span>
+            </div>
+            <div class="project-scope">{project.scope}</div>
+          </div>
+        </a>
+      ))}
+    </div>
+  )}
 </section>
 
 <style>
-  .projects-section {
-    padding: 2rem 0;
+  .projects-grid-section {
+    margin-bottom: 2rem;
   }
 
-  .section-title {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+  .projects-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
     color: #2c3e50;
   }
 
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
   }
 
-  @media (min-width: 640px) {
-    .projects-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .project-card {
+    display: block;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-decoration: none;
+    color: inherit;
   }
 
-  @media (min-width: 1024px) {
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .project-image {
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .placeholder-image {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f0;
+    color: #999;
+    font-size: 3rem;
+  }
+
+  .project-info {
+    padding: 1.25rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.2rem;
+    margin: 0 0 0.5rem 0;
+    color: #2c3e50;
+  }
+
+  .project-meta {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: #555;
+  }
+
+  .project-scope {
+    font-size: 0.9rem;
+    color: #3498db;
+  }
+
+  .no-projects {
+    padding: 3rem;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+  }
+
+  @media (max-width: 768px) {
     .projects-grid {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
   }
 </style>
