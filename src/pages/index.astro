@@ -117,6 +117,42 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
+  <!-- Brand Partners Section -->
+  <section class="partners">
+    <div class="container">
+      <h2 class="section-title">Our Brand Partners</h2>
+      <div class="logos-grid">
+        <div class="logo-item">
+          <div class="logo-placeholder">Philips</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Schneider</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Madrix</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Dalux</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Intelight</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Dynalite</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Prosounds</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Meanwell</div>
+        </div>
+        <div class="logo-item">
+          <div class="logo-placeholder">Clipsal C-Bus</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Markets Section -->
   <section class="markets">
     <div class="container">
@@ -222,30 +258,28 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 
-  <!-- Testimonials Section -->
-  <section class="testimonials">
+  <!-- Our Clients Section -->
+  <section class="clients">
     <div class="container">
-      <h2 class="section-title">What Our Clients Say</h2>
-      <div class="testimonial-slider">
-        <div class="testimonial">
-          <div class="quote">
-            "The lighting automation system has transformed our hotel lobby. The team's expertise and attention to detail were outstanding throughout the project."
-          </div>
-          <div class="author">- Sarah Johnson, Grand Plaza Hotel</div>
+      <h2 class="section-title">Our Clients</h2>
+      <div class="client-logos">
+        <div class="client-logo">
+          <div class="logo-placeholder">Client 1</div>
         </div>
-        
-        <div class="testimonial">
-          <div class="quote">
-            "Our boardroom's new AV and lighting system has significantly improved our presentations and video conferences. Highly recommended!"
-          </div>
-          <div class="author">- Michael Chen, Tech Innovations Inc.</div>
+        <div class="client-logo">
+          <div class="logo-placeholder">Client 2</div>
         </div>
-        
-        <div class="testimonial">
-          <div class="quote">
-            "The custom LED lighting in our retail store has improved our product displays and created a more welcoming environment for customers."
-          </div>
-          <div class="author">- Emma Rodriguez, Fashion Forward</div>
+        <div class="client-logo">
+          <div class="logo-placeholder">Client 3</div>
+        </div>
+        <div class="client-logo">
+          <div class="logo-placeholder">Client 4</div>
+        </div>
+        <div class="client-logo">
+          <div class="logo-placeholder">Client 5</div>
+        </div>
+        <div class="client-logo">
+          <div class="logo-placeholder">Client 6</div>
         </div>
       </div>
     </div>
@@ -440,10 +474,53 @@ import Layout from '../layouts/Layout.astro';
     color: var(--secondary-color);
   }
 
+  /* Brand Partners Section */
+  .partners {
+    padding: 5rem 0;
+    background-color: white;
+  }
+
+  .logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-gap: 2rem;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .logo-item {
+    width: 150px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: var(--transition);
+  }
+
+  .logo-item:hover {
+    filter: grayscale(0);
+    opacity: 1;
+  }
+
+  .logo-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #555;
+    text-align: center;
+    border-radius: var(--border-radius);
+  }
+
   /* Markets Section */
   .markets {
     padding: 5rem 0;
-    background-color: white;
+    background-color: var(--light-bg);
   }
 
   .markets-grid {
@@ -454,10 +531,11 @@ import Layout from '../layouts/Layout.astro';
 
   .market-item {
     padding: 2rem;
-    background-color: var(--light-bg);
+    background-color: white;
     border-radius: var(--border-radius);
     transition: var(--transition);
     text-align: center;
+    box-shadow: var(--box-shadow);
   }
 
   .market-item:hover {
@@ -527,38 +605,31 @@ import Layout from '../layouts/Layout.astro';
     font-size: 1.5rem;
   }
 
-  /* Testimonials Section */
-  .testimonials {
+  /* Clients Section */
+  .clients {
     padding: 5rem 0;
     background-color: white;
   }
 
-  .testimonial-slider {
-    max-width: 800px;
-    margin: 0 auto;
+  .client-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 3rem;
+    align-items: center;
+    justify-items: center;
   }
 
-  .testimonial {
-    padding: 3rem;
-    text-align: center;
+  .client-logo {
+    width: 180px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
   }
 
-  .quote {
-    font-size: 1.25rem;
-    font-style: italic;
-    margin-bottom: 1.5rem;
-    position: relative;
-  }
-
-  .quote:before, .quote:after {
-    content: '"';
-    font-size: 2rem;
-    color: var(--primary-color);
-  }
-
-  .author {
-    font-weight: 600;
-    color: var(--secondary-color);
+  .client-logo:hover {
+    transform: scale(1.05);
   }
 
   /* Responsive Adjustments */
@@ -583,6 +654,14 @@ import Layout from '../layouts/Layout.astro';
     .cta h2 {
       font-size: 2rem;
     }
+
+    .logos-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .client-logos {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   @media (max-width: 576px) {
@@ -597,39 +676,13 @@ import Layout from '../layouts/Layout.astro';
     .services-grid, .products-grid, .markets-grid, .features-grid {
       grid-template-columns: 1fr;
     }
-  }
-</style>
 
-<style>
-  .hidden {
-    display: none;
-  }
-</style>
-
-<script>
-  // Simple JavaScript to handle the testimonial slider
-  document.addEventListener('DOMContentLoaded', () => {
-    const testimonials = document.querySelectorAll('.testimonial');
-    let currentTestimonial = 0;
-
-    // Hide all testimonials except the first one
-    testimonials.forEach((testimonial, index) => {
-      if (index !== 0) {
-        testimonial.classList.add('hidden');
-      }
-    });
-
-    // Function to show the next testimonial
-    function showNextTestimonial() {
-      //testimonials[currentTestimonial].style.display = 'none';
-        testimonials[currentTestimonial].classList.add('hidden');
-
-      currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-      //testimonials[currentTestimonial].style.display = 'block';
-      testimonials[currentTestimonial].classList.remove('hidden');
+    .logos-grid {
+      grid-template-columns: repeat(2, 1fr);
     }
-    
-    // Automatically cycle through testimonials
-    setInterval(showNextTestimonial, 5000);
-  });
-</script>
+
+    .client-logos {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
