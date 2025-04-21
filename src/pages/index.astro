@@ -123,32 +123,30 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="section-title">Our Brand Partners</h2>
       <div class="logos-grid">
         <div class="logo-item">
-          <div class="logo-placeholder">Philips</div>
+          <img src="/public/images/brands/clipsal-300-150.png" alt="logo of clipsal">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Schneider</div>
+          <img src="/public/images/brands/dalux-lighting-300-150.png" alt="logo of dalux lighting">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Madrix</div>
+          <img src="/public/images/brands/intelight-300-150.png" alt="logo of intelight">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Dalux</div>
+          <img src="/public/images/brands/madrix-300-150.png" alt="logo of madrix">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Intelight</div>
+          <img src="/public/images/brands/meanwell-300-150.png" alt="logo of meanwell">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Dynalite</div>
+          <img src="/public/images/brands/philips-300-150.png" alt="logo of philips">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Prosounds</div>
+          <img src="/public/images/brands/dynalite-300-150.png" alt="logo of dynalite">
         </div>
         <div class="logo-item">
-          <div class="logo-placeholder">Meanwell</div>
+          <img src="/public/images/brands/schneider-300-150.png" alt="logo of schneider">
         </div>
-        <div class="logo-item">
-          <div class="logo-placeholder">Clipsal C-Bus</div>
-        </div>
+        
       </div>
     </div>
   </section>
@@ -264,22 +262,49 @@ import Layout from '../layouts/Layout.astro';
       <h2 class="section-title">Our Clients</h2>
       <div class="client-logos">
         <div class="client-logo">
-          <div class="logo-placeholder">Client 1</div>
+          <img src="/public/images/clients/jetwing-colombo-7.jpg" alt="logo of Jetwing hotels colombo">
         </div>
         <div class="client-logo">
-          <div class="logo-placeholder">Client 2</div>
+          <img src="/public/images/clients/maalifushi-resort.jpg" alt="logo of maalifushi-resort">
         </div>
         <div class="client-logo">
-          <div class="logo-placeholder">Client 3</div>
+          <img src="/public/images/clients/ulagalla-resort.jpg" alt="logo of ulagalla resort">
         </div>
         <div class="client-logo">
-          <div class="logo-placeholder">Client 4</div>
+          <img src="/public/images/clients/sampath-centre.jpg" alt="logo of sampath centre colombo">
         </div>
         <div class="client-logo">
-          <div class="logo-placeholder">Client 5</div>
+          <img src="/public/images/clients/barcelo-resort-male.png" alt="logo of Barcello hotels & resorts Male">
         </div>
         <div class="client-logo">
-          <div class="logo-placeholder">Client 6</div>
+          <img src="/public/images/clients/icbt-kurunegala.png" alt="logo of ICBT campus kurunegala">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/srilankan-air-cargo.png" alt="logo of sri lankan airline cargo Katunayaka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/airportandaviation-srilanka.png" alt="logo of Airport & aviation sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/waterboard-rathmalana.png" alt="logo of waterboard boardroom Rathmalana sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/altair-colombo.png" alt="logo of altair Colombo sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/nsbm-homagama.jpg" alt="logo of NSBM university Homagama sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/markandspencer-colombo.png" alt="logo of Mark and Spencer Colombo sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/lanka-telecom.png" alt="logo of lanka telecom Colombo sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/sofia-colombo.png" alt="logo of Sofia Colombo city hotel by Raddison sri lanka">
+        </div>
+        <div class="client-logo">
+          <img src="/public/images/clients/university-of-peradeniya-eoa.jpg" alt="logo of university of Peradeniya sri lanka">
         </div>
       </div>
     </div>
@@ -487,6 +512,12 @@ import Layout from '../layouts/Layout.astro';
     align-items: center;
     justify-items: center;
   }
+  .logos-grid img {
+    max-width: 100%;
+    max-height: 100px;
+    height: auto;
+    object-fit: contain;
+  }
 
   .logo-item {
     width: 150px;
@@ -504,7 +535,7 @@ import Layout from '../layouts/Layout.astro';
     opacity: 1;
   }
 
-  .logo-placeholder {
+  /* .logo-placeholder {
     width: 100%;
     height: 100%;
     background-color: #eee;
@@ -515,7 +546,7 @@ import Layout from '../layouts/Layout.astro';
     color: #555;
     text-align: center;
     border-radius: var(--border-radius);
-  }
+  } */
 
   /* Markets Section */
   .markets {
@@ -628,6 +659,11 @@ import Layout from '../layouts/Layout.astro';
     transition: var(--transition);
   }
 
+  .client-logo img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
   .client-logo:hover {
     transform: scale(1.05);
   }
