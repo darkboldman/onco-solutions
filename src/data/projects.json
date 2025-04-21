@@ -12,7 +12,7 @@
     {
       "name": "Auditorium at ICBT Campus",
       "year": 2025,
-      "scope": "Lighting control System & LED Moon Light",
+      "scope": "Lighting control System",
       "description": "We installed an advanced state-of-the-art lighting control system at the auditorium of ICBT Campus, Kurunegala. Designed to enhance both energy efficiency and user convenience, this intelligent system allows seamless control over the auditorium’s lighting environment—perfect for lectures, presentations, and events.",
       "clientUrl": "https://icbt.lk/facilities/",
       "location": "Kurunegala, Sri Lanka",
@@ -22,7 +22,7 @@
     {
       "name": "Worship Hall At JCC",
       "year": 2025,
-      "scope": "Lighting control System",
+      "scope": "Lighting control System & LED Moon Light",
       "description": "We designed and installed a custom moonlight LED panel to softly illuminate the statue in the worship hall, enhancing the serene and spiritual atmosphere. The setup includes a smart lighting control system for easy scene adjustment, dimming, and scheduling — all tailored to the centre’s ceremonial needs. Respectful. Refined. Precisely controlled.",
       "clientUrl": "https://jasteca.net/index.php",
       "location": "Colombo, Sri Lanka",
@@ -30,54 +30,64 @@
       "slug": "japanese-cultural-centre"
     },
     {
-      "name": "Project Name4",
-      "year": 2021,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Negambo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name4"
-    },
-    {
-      "name": "Project Name5",
-      "year": 2020,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Male, Maldives",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name5"
-    },
-    {
-      "name": "Project Name1",
+      "name": "Airport Cargo Building",
       "year": 2024,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
+      "scope": "LED Lighting System & Philips Luminairies",
+      "description": "Onco Solutions successfully completed the installation of a modern linear lighting system combined with Philips luminaires at the Cargo Building of Bandaranaike International Airport. The project enhances visibility, improves energy efficiency, and supports 24/7 operations with a durable, low-maintenance lighting solution. Designed to meet international standards, this upgrade ensures safer, more efficient cargo handling while aligning with the airport’s modernization goals.",
       "clientUrl": "https://client-website.com",
-      "location": "Galle, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name1"
+      "location": "Katunayaka, Sri Lanka",
+      "imageUrl": "/images/projects/cargo-building-katunayaka.jpg",
+      "slug": "airport-cargo-building"
     },
     {
-      "name": "Project Name2",
+      "name": "Barcelo - Nasadura Palace",
+      "year": 2024,
+      "scope": "Lighting control System",
+      "description": "Onco Solutions completed the installation of a smart lighting control system at Barceló Násandhura Palace Hotel, covering both general areas and banquet halls. The system offers seamless control, energy efficiency, and customizable ambiance, enhancing the hotel's guest experience while supporting smooth day-to-day operations.",
+      "clientUrl": "https://www.barcelo.com/en-ww/barcelo-nasandhura-male/",
+      "location": "Male, Maldives",
+      "imageUrl": "/images/projects/barcilo-nasadura-male.jpg",
+      "slug": "barcilo-nasadura-palace"
+    },
+    {
+      "name": "Airport Terminal Building",
+      "year": 2024,
+      "scope": "Lighting control System & Luminaries",
+      "description": "Description of the project...",
+      "clientUrl": "https://client-website.com",
+      "location": "Katunayaka, Sri Lanka",
+      "imageUrl": "/images/projects/airport-terminal-building.jpg",
+      "slug": "airport-terminal-building"
+    },
+    {
+      "name": "Auditorium at University of Rajarata",
+      "year": 2024,
+      "scope": "Lighting, audio, stage lighting & projector system",
+      "description": "Onco Solutions successfully completed the installation of a state-of-the-art lighting, audio, stage lighting, and projector system at the auditorium of the University of Rajarata, Sri Lanka. This upgrade enhances the venue's functionality and atmosphere, creating an immersive experience for academic events, performances, and presentations.",
+      "clientUrl": "https://fot.rjt.ac.lk/",
+      "location": "Mihintale, Sri Lanka",
+      "imageUrl": "/images/projects/auditorium-university-of-rajarata.jpg",
+      "slug": "auditorium-university-of-rajarata"
+    },
+    {
+      "name": "Auditorium at University of Kelaniya",
+      "year": 2024,
+      "scope": "Lighting, audio, stage lighting & projector system",
+      "description": "Onco Solutions successfully completed the installation of a state-of-the-art lighting, audio, stage lighting, and projector system at the auditorium of the University of Kelaniya, Sri Lanka. This upgrade enhances the venue's functionality and atmosphere, creating an immersive experience for academic events, performances, and presentations.",
+      "clientUrl": "https://fct.kln.ac.lk/",
+      "location": "Kelaniya, Sri Lanka",
+      "imageUrl": "/images/projects/auditorium-university-of-kelaniya.jpg",
+      "slug": "auditorium-university-of-kelaniya"
+    },
+    {
+      "name": "Maitland Cresent Banquet",
       "year": 2023,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
+      "scope": "LED RGB Lighting, DMX control, linear lighting & lighting control System",
+      "description": "Onco Solutions successfully completed the supply, programming, installation, and commissioning of an advanced lighting control system for general lighting, DMX control, and RGB linear lighting at the Sri Lanka Army’s Maitland Crescent Banquet Hall. The solution delivered dynamic ambiance and precise control, enhancing both the functionality and visual impact of the venue.",
+      "clientUrl": "/",
       "location": "Colombo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name2"
-    },
-    {
-      "name": "Project Name3",
-      "year": 2022,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Kandy, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name3"
+      "imageUrl": "/images/projects/maitland-cresent-banquet.jpg",
+      "slug": "maitland-cresent-banquet"
     },
     {
       "name": "Project Name4",
@@ -150,7 +160,7 @@
       "slug": "project-name5"
     },{
       "name": "Project Name1",
-      "year": 2024,
+      "year": 2012,
       "scope": "LED Lighting System",
       "description": "Description of the project...",
       "clientUrl": "https://client-website.com",
@@ -200,7 +210,7 @@
     },
     {
       "name": "Project Name1",
-      "year": 2024,
+      "year": 2012,
       "scope": "LED Lighting System",
       "description": "Description of the project...",
       "clientUrl": "https://client-website.com",
