@@ -1,33 +1,33 @@
 [
     {
-      "name": "Project Name1",
-      "year": 2024,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Galle, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name1"
+      "name": "E O A Perera Theatre",
+      "year": 2025,
+      "scope": "Lighting control System",
+      "description": "We are proud to have completed the installation of a state-of-the-art lighting control system at the E. O. E. Perera Theatre, located within the Engineering Faculty of the University of Peradeniya. This iconic theatre, with a seating capacity of 542, now features a modern, intuitive lighting system designed to support a wide range of academic and cultural events. Our installation enhances both the functionality and flexibility of the venue, offering seamless control and ambiance adjustment for lectures, performances, and presentations.  ",
+      "clientUrl": "https://eeu.pdn.ac.lk/EOE_Pereira_Theatre",
+      "location": "Peradeniya, Sri Lanka",
+      "imageUrl": "/images/projects/eoe-perera-auditorium.jpg",
+      "slug": "eoa-perera-Auditorim-peradeniya"
     },
     {
-      "name": "Project Name2",
-      "year": 2023,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
+      "name": "Auditorium at ICBT Campus",
+      "year": 2025,
+      "scope": "Lighting control System & LED Moon Light",
+      "description": "We installed an advanced state-of-the-art lighting control system at the auditorium of ICBT Campus, Kurunegala. Designed to enhance both energy efficiency and user convenience, this intelligent system allows seamless control over the auditorium’s lighting environment—perfect for lectures, presentations, and events.",
+      "clientUrl": "https://icbt.lk/facilities/",
+      "location": "Kurunegala, Sri Lanka",
+      "imageUrl": "/images/projects/auditorium-icbt-kurunegala.jpg",
+      "slug": "Auditorium-at-icbt-campus"
+    },
+    {
+      "name": "Worship Hall At JCC",
+      "year": 2025,
+      "scope": "Lighting control System",
+      "description": "We designed and installed a custom moonlight LED panel to softly illuminate the statue in the worship hall, enhancing the serene and spiritual atmosphere. The setup includes a smart lighting control system for easy scene adjustment, dimming, and scheduling — all tailored to the centre’s ceremonial needs. Respectful. Refined. Precisely controlled.",
+      "clientUrl": "https://jasteca.net/index.php",
       "location": "Colombo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name2"
-    },
-    {
-      "name": "Project Name3",
-      "year": 2022,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Kandy, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name3"
+      "imageUrl": "/images/projects/japanese-cultural-centre.jpg",
+      "slug": "japanese-cultural-centre"
     },
     {
       "name": "Project Name4",
