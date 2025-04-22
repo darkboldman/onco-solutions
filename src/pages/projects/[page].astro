@@ -1,6 +1,5 @@
 ---
-// File: /projects/index.astro
-// This handles the first page of projects
+// File: /projects/[page].astro
 import Layout from '../../layouts/Layout.astro';
 import ProjectGrid from '../../components/ProjectGrid.astro';
 import allProjects from '../../data/projects.json';
@@ -17,32 +16,53 @@ interface Project {
   slug: string;
 }
 
+// Generate static paths for all pages
+export async function getStaticPaths() {
+  const projects: Project[] = allProjects as Project[];
+  const projectsPerPage = 12;
+  const totalProjects = projects.length;
+  const totalPages = Math.ceil(totalProjects / projectsPerPage);
+  
+  // Create an array for all pages except the first one (which is handled by index.astro)
+  return Array.from({ length: totalPages - 1 }, (_, i) => {
+    const page = i + 2; // Start from page 2
+    const start = (page - 1) * projectsPerPage;
+    const end = start + projectsPerPage;
+    
+    return {
+      params: { page: String(page) },
+      props: { 
+        page: String(page),
+        start,
+        end,
+        totalPages,
+        totalProjects
+      }
+    };
+  });
+}
+
+// Get props from getStaticPaths
+const { page, start, end, totalPages, totalProjects } = Astro.props;
+const currentPage = parseInt(page);
+
 // Type the projects array
 const projects: Project[] = allProjects as Project[];
 
 // Sort projects by year (newest first)
 projects.sort((a, b) => b.year - a.year);
 
-// Pagination setup
-const projectsPerPage = 12;
-const currentPage = 1;
-
-const start = 0;
-const end = projectsPerPage;
+// Get paginated projects for this page
 const paginatedProjects = projects.slice(start, end);
-
-// Calculate pagination info
-const totalProjects = projects.length;
-const totalPages = Math.ceil(totalProjects / projectsPerPage);
 
 // Helper function to generate pagination URLs
 function getPageUrl(pageNum: number): string {
   if (pageNum === 1) return '/projects';
-  return `/projects/${pageNum}`;
+  return `/projects/${String(pageNum)}`; // Convert to string explicitly
 }
 ---
 
-<Layout title="Our Projects | ONCO - Lighting Automation & LED Solutions">
+<Layout title={`Our Projects - Page ${currentPage} | ONCO - Lighting Automation & LED Solutions`}>
   <main>
     <div class="hero">
       <div class="container">
@@ -54,15 +74,19 @@ function getPageUrl(pageNum: number): string {
     <div class="container">
       <ProjectGrid 
         projects={paginatedProjects} 
-        title="Our Projects" 
+        title={`Our Projects - Page ${currentPage}`} 
       />
 
       <!-- Pagination Controls -->
       <div class="pagination">
         <div class="pagination-info">
-          Showing 1-{Math.min(projectsPerPage, totalProjects)} of {totalProjects} projects
+          Showing {start + 1}-{Math.min(end, totalProjects)} of {totalProjects} projects
         </div>
         <div class="pagination-controls">
+          {currentPage > 1 && (
+            <a href={getPageUrl(currentPage - 1)} class="pagination-link">Previous</a>
+          )}
+          
           <div class="pagination-pages">
             {Array.from({ length: totalPages }, (_, i) => i + 1).map(pageNum => (
               <a 

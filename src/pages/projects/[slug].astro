@@ -18,19 +18,26 @@ interface Project {
 export async function getStaticPaths() {
   const projects = allProjects as Project[];
   
-  return projects.map(project => {
+  const paths = projects.map(project => {
     return {
       params: { slug: project.slug },
       props: { project },
     };
   });
+  return paths;
 }
 
-// Get the project from props (already fetched in getStaticPaths)
-const { project } = Astro.props;
+const { slug } = Astro.params;
+const projects = allProjects as Project[];
+
+const project = projects.find((p) => p.slug === slug);
+
+if (!project) {
+  throw new Error(`No project found with slug: ${slug}`);
+}
 
 // Extract project details
-const { name, year, scope, description, clientUrl, location, imageUrl } = project;
+const { name, year, scope, description, clientUrl, location, imageUrl } = project || {};
 
 // Format description paragraphs
 const descriptionParagraphs = description.split('\n\n');
@@ -76,12 +83,11 @@ const descriptionParagraphs = description.split('\n\n');
             <span>ONCO</span>
           </div>
         )}
-        
-        <!-- Gallery images would go here -->
       </div>
 
       <div class="project-description">
         <h2>Project Overview</h2>
+        
         {descriptionParagraphs.map(paragraph => (
           <p>{paragraph}</p>
         ))}
