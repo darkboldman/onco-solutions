@@ -229,24 +229,54 @@
       "slug": "cinnamon-dhonveli"
     },
     {
-      "name": "Project Name3",
-      "year": 2000,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Kandy, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name3"
+      "name": "Rolex Showroom at One Galleface",
+      "year": 2020,
+      "scope": "DALI Lighting Control",
+      "description": "Onco Solutions was proud to deliver the supply and installation of a sophisticated DALI lighting control system for the ROLEX showroom at One Galle Face. Designed to enhance the showroom's luxury ambiance, the system ensures seamless control, precision, and elegance in lighting performance throughout the space.",
+      "clientUrl": "https://www.rolex.com/rolex-dealers/chathamluxurywatches-4685/rswi_18907-colombo-srilanka",
+      "location": "Colombo, Sri Lanka",
+      "imageUrl": "/images/projects/rolex-showroom-colombo.jpg",
+      "slug": "rolex-showroom-colombo"
     },
     {
-      "name": "Project Name4",
-      "year": 2000,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Negambo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name4"
+      "name": "Ahaspokuna Resort",
+      "year": 2020,
+      "scope": "Banquet DMX & General Lighting control System",
+      "description": "Onco Solutions completed the supply and installation of a Banquet DMX and General Lighting Control System at Ahaspokuna Resort, Kurunegala. The project enhanced the resort’s banquet space with sophisticated lighting control for both atmosphere and efficiency.",
+      "clientUrl": "https://ahaspokunaholidayresorts.com/",
+      "location": "Kurunegala, Sri Lanka",
+      "imageUrl": "/images/projects/ahaspokuna-resort.jpg",
+      "slug": "ahaspokuna-resort"
+    },
+    {
+      "name": "Auditorium at Sumedha College",
+      "year": 2021,
+      "scope": "Lighting control System",
+      "description": "Onco Solutions successfully completed the supply and installation of an advanced lighting control system for the auditorium at Sumedha College, Gampaha. Designed to enhance stage performances and events, the system offers seamless control, energy efficiency, and reliable performance tailored to the needs of a modern educational environment.",
+      "clientUrl": "http://scg.ydc.lk/",
+      "location": "Gampaha, Sri Lanka",
+      "imageUrl": "/images/projects/sumedha-gampaha.jpg",
+      "slug": "sumedha-gampaha"
+    },
+    {
+      "name": "Avani Kalutara Resort",
+      "year": 2019,
+      "scope": "Banquet DMX & General Lighting Control",
+      "description": "Onco Solutions proudly delivered the lighting control system for Avani Resort in Kalutara, handling the supply and installation of both DMX-controlled banquet lighting and general area lighting controls. Our system enhances ambiance and efficiency, tailored to meet the resort’s dynamic hospitality needs.",
+      "clientUrl": "https://www.avanihotels.com/en/kalutara",
+      "location": "Kalutara, Sri Lanka",
+      "imageUrl": "/images/projects/avani-kalutara.jpg",
+      "slug": "avani-kalutara"
+    },
+    {
+      "name": "Hilton Double Tree",
+      "year": 2019,
+      "scope": "Lighting control System for Delux & President Suites & General areas",
+      "description": "At Hilton DoubleTree by Rajawarana Resorts, Weerawila, Onco Solutions delivered a comprehensive lighting control solution, enhancing comfort and efficiency across the Deluxe Suites, Presidential Suites, and all general areas. Our seamless installation blends smart technology with luxury, ensuring an elevated guest experience throughout the resort.",
+      "clientUrl": "https://www.hilton.com/en/hotels/wrzrjdi-doubletree-weerawila-rajawarna-resort/?WT.mc_id=zPADA0LK1MB2PSH3paid_ggl4INTBPP_Apr5SiteGGL_ObjROAS_TacBPP_TarKeyword_SMWW_FrmtRSAs_CrNText_DvceAll_LPOHW6MULTIBR7EN8acctid=700000002399003-campid=71700000093512843-adgrpid=58700007792392934&&&&&gad_source=1&gad_campaignid=17068487474&gbraid=0AAAAADnjLGNzhr0LzZ_FBjzoqvuK_PCLa&gclid=Cj0KCQjw_JzABhC2ARIsAPe3ynoDU_3BHaF9HjREjJ9qcPbM_ggtgPp7HJwMcAA4-PqFWvGY9lpMVHYaAgrbEALw_wcB&gclsrc=aw.ds",
+      "location": "Weeravila, Sri Lanka",
+      "imageUrl": "/images/projects/hilton-doubletree-weeravila.jpg",
+      "slug": "hilton-doubletree-weeravila"
     },
     {
       "name": "Project Name5",
