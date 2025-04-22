@@ -1,6 +1,6 @@
 [
     {
-      "name": "E O A Perera Theatre",
+      "name": "E O A Perera Theatre at UOP",
       "year": 2025,
       "scope": "Lighting control System",
       "description": "We are proud to have completed the installation of a state-of-the-art lighting control system at the E. O. E. Perera Theatre, located within the Engineering Faculty of the University of Peradeniya. This iconic theatre, with a seating capacity of 542, now features a modern, intuitive lighting system designed to support a wide range of academic and cultural events. Our installation enhances both the functionality and flexibility of the venue, offering seamless control and ambiance adjustment for lectures, performances, and presentations.  ",
@@ -140,47 +140,97 @@
       "slug": "kmc-auditorium"
     },
     {
-      "name": "Project Name4",
-      "year": 2021,
+      "name": "Grand Silver Ray",
+      "year": 2022,
       "scope": "LED Lighting System",
       "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Negambo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name4"
+      "clientUrl": "https://silverray.lk/",
+      "location": "Ratnapura, Sri Lanka",
+      "imageUrl": "/images/projects/silver-ray.jpg",
+      "slug": "silver-ray"
     },
     {
-      "name": "Project Name5",
-      "year": 2020,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Male, Maldives",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name5"
+      "name": "Sofia Colombo - By Raddison",
+      "year": 2022,
+      "scope": "Guest Room Control System for 212 Rooms",
+      "description": "Onco Solutions successfully delivered a complete Guest Room Control System for 212 rooms at PARK INN by Radisson. The project included smart automation for lighting, air conditioning, and service controls, enhancing guest comfort and energy efficiency. Our seamless integration and timely execution reflect our commitment to quality and innovation in hospitality technology.",
+      "clientUrl": "https://www.sofiacolombo.com/",
+      "location": "Colombo, Sri Lanka",
+      "imageUrl": "/images/projects/sofia-colombo.jpg",
+      "slug": "sofia-colombo"
     },{
-      "name": "Project Name1",
-      "year": 2012,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Galle, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name1"
+      "name": "Altair Residence Colombo",
+      "year": 2022,
+      "scope": "Smart Home Solution",
+      "description": "Onco Solutions successfully completed the installation, programming, and commissioning of a full apartment smart home system at Altair Colombo, covering 240 apartments at Straight Tower. Additionally, we delivered advanced smart thermostat control solutions for 404 apartments, ensuring energy-efficient climate control and seamless smart living.",
+      "clientUrl": "https://www.altair.lk/",
+      "location": "Colombo, Sri Lanka",
+      "imageUrl": "/images/projects/altair-colombo.jpg",
+      "slug": "altair-colombo"
     },
     {
-      "name": "Project Name2",
-      "year": 2023,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
+      "name": "Conference Hall at GWU",
+      "year": 2021,
+      "scope": "Lighting, Lighting Control & Audio Visual",
+      "description": "Onco Solutions proudly partnered with Wickramarachchi University of Indigenous Medicine in Gampaha (GWU) to deliver a complete lighting, lighting control, and AV solution for the Senate/Conference Hall. From design to installation, our team ensured a seamless integration of modern technology to enhance the space’s functionality and atmosphere, supporting impactful presentations and immersive experiences.",
+      "clientUrl": "https://gwu.ac.lk/",
+      "location": "Gampaha, Sri Lanka",
+      "imageUrl": "/images/projects/wikramarachchi-gampaha.jpg",
+      "slug": "wikramarachchi-gampaha"
+    },
+    {
+      "name": "Auditorium at SJP ",
+      "year": 2021,
+      "scope": "Lighting control System",
+      "description": "Onco Solutions successfully completed the supply and installation of a state-of-the-art lighting control system at the Ven. Sri Soratha Auditorium, Faculty of Technology, University of Sri Jayewardenepura, Homagama. This project highlights our dedication to delivering intelligent lighting solutions that enhance functionality, efficiency, and the overall user experience in modern educational spaces.",
+      "clientUrl": "https://tech.sjp.ac.lk/",
+      "location": "Homagama, Sri Lanka",
+      "imageUrl": "/images/projects/japura-auditorium.jpg",
+      "slug": "japura-auditorium"
+    },
+    {
+      "name": "Restaurant Chilis at One Galleface",
+      "year": 2020,
+      "scope": "Lighting control System",
+      "description": "Onco Solutions successfully completed the supply and installation of a custom lighting control system for CHILIS Restaurant at One Galle Face Mall. Designed to enhance the dining experience, our solution delivers seamless ambiance control through the perfect blend of smart technology and aesthetic lighting design.",
+      "clientUrl": "https://chilis.lk/",
       "location": "Colombo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name2"
+      "imageUrl": "/images/projects/chilis-restaurant.jpg",
+      "slug": "chilis-restaurant"
+    },
+    {
+      "name": "Auditorium & Boardroom at Royal Institute",
+      "year": 2020,
+      "scope": "Lighting control System",
+      "description": "Onco Solutions delivered a tailored lighting control system for the Auditorium and Board Room at the Royal Institute of Colombo Campus Pvt Ltd. The installation ensures optimal lighting performance, intuitive control, and a refined atmosphere for presentations, meetings, and events.",
+      "clientUrl": "https://ric.lk/",
+      "location": "Colombo, Sri Lanka",
+      "imageUrl": "/images/projects/royal-institute-colombo.jpg",
+      "slug": "royal-institute-colombo"
+    },
+    {
+      "name": "Music Pool at Hardrock Hotels",
+      "year": 2018,
+      "scope": "Music Pool Lighting control System",
+      "description": "At Hardrock Hotel in the stunning Malé Atoll, Maldives—developed by Singha Estate Public Company Limited, Thailand—Onco Solutions delivered a custom DMX SPI lighting control system for the Integrated Music Pool. Designed to sync seamlessly with sound and rhythm, our installation transforms every swim into an immersive audio-visual experience.",
+      "clientUrl": "https://hotel.hardrock.com/maldives/?utm_source=organic&utm_medium=gmb&utm_campaign=hardrockmaldives",
+      "location": "Male Atoll, Maldives",
+      "imageUrl": "/images/projects/hardrock-resort-male.jpg",
+      "slug": "hardrock-resort-male"
+    },
+    {
+      "name": "Cinnamon Dhonveli Resort",
+      "year": 2019,
+      "scope": "General Lighting control System",
+      "description": "Onco Solutions proudly partnered with John Keells for the Cinnamon Dhonveli project in the Maldives, delivering a comprehensive supply and installation of the General Area Lighting Control System. This state-of-the-art system enhances energy efficiency and ensures seamless lighting management throughout the resort’s communal spaces, perfectly blending innovation with the island’s serene ambiance.",
+      "clientUrl": "https://www.cinnamonhotels.com/cinnamon-dhonveli-maldives?utm_source=google&utm_medium=organic&utm_campaign=cinnamondhonvelimaldives&utm_term=gbp",
+      "location": "Dhonveli, Maldives",
+      "imageUrl": "/images/projects/cinnamon-dhonveli.jpg",
+      "slug": "cinnamon-dhonveli"
     },
     {
       "name": "Project Name3",
-      "year": 2022,
+      "year": 2000,
       "scope": "LED Lighting System",
       "description": "Description of the project...",
       "clientUrl": "https://client-website.com",
@@ -190,7 +240,7 @@
     },
     {
       "name": "Project Name4",
-      "year": 2021,
+      "year": 2000,
       "scope": "LED Lighting System",
       "description": "Description of the project...",
       "clientUrl": "https://client-website.com",
@@ -200,57 +250,7 @@
     },
     {
       "name": "Project Name5",
-      "year": 2020,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Male, Maldives",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name5"
-    },
-    {
-      "name": "Project Name1",
-      "year": 2012,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Galle, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name1"
-    },
-    {
-      "name": "Project Name2",
-      "year": 2023,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Colombo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name2"
-    },
-    {
-      "name": "Project Name3",
-      "year": 2022,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Kandy, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name3"
-    },
-    {
-      "name": "Project Name4",
-      "year": 2021,
-      "scope": "LED Lighting System",
-      "description": "Description of the project...",
-      "clientUrl": "https://client-website.com",
-      "location": "Negambo, Sri Lanka",
-      "imageUrl": "/images/projects/project-name.jpg",
-      "slug": "project-name4"
-    },
-    {
-      "name": "Project Name5",
-      "year": 2020,
+      "year": 2000,
       "scope": "LED Lighting System",
       "description": "Description of the project...",
       "clientUrl": "https://client-website.com",
