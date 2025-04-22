@@ -8,6 +8,8 @@
     --dark-bg: #212529;
     --text-color: #1d2951;
     --text-light: #f8f9fa;
+    --green-color:#03be03;
+    --orange-color:#ffa621;
     --border-radius: 5px;
     --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
@@ -67,3 +69,22 @@
     padding: 8px 16px;
     font-size: 0.9rem;
   }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.material-symbols-outlined {
+  font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 48;
+  font-size: 3rem;
+}
+
+/* colors */
+.green {
+  color: var(--green-color);
+}
+.orange {
+  color: var(--orange-color);
+}
